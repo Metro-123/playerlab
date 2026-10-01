@@ -1,0 +1,29 @@
+node_modules/
+.next/
+out/
+build/
+
+# Generated artefacts. These are deliberately NOT ignored: the build imports
+# data/manifest.json and data/model.json statically, and the runtime fetches
+# public/data/players.json. A deploy without them fails to compile or renders
+# an empty dataset. Regenerate with `npm run data:generate` / `npm run data:model`.
+# If the 3.5 MB payload ever becomes too heavy for your git host, do not ignore
+# it silently — move it to a CDN or a release asset and update data/schema.md.
+# public/data/players.json
+# data/model.json
+# data/manifest.json
+
+tsconfig.tsbuildinfo
+next-env.d.ts
+
+.env*
+!.env.example
+
+.DS_Store
+Thumbs.db
+*.log
+npm-debug.log*
+.vscode/
+.idea/
+
+.vercel
